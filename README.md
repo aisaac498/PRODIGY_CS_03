@@ -65,5 +65,10 @@ This application allows users to log keystrokes using a graphical user interface
 - Click "Stop" to end the logging session.
 - Use the moon/sun icon at the top right to switch between light and dark modes.
 
+## Developer Notes
+- This keylogger was developed for Windows machines. Please run it on a Windows machine, preferably Windows 11.
+- The `fn` key may not be detectable via `pynput`, as it's often handled by the operating system at a lower level.
+- The keylogger may not be capturing `ctrl + {any key}` combinations due to the way the `pynput` library handles keyboard events. When a modifier key like `ctrl` is held down and another key is pressed, it might be that only the `ctrl` key press is captured, and the subsequent key press isn't recognized as a separate event or is processed differently.
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
